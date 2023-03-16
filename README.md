@@ -65,7 +65,7 @@ df = df.dropna()
 pd.options.display.float_format = "{:,.2f}".format
 df.describe()[['InitialApprovalAmount','CurrentApprovalAmount']]
 ```
-จากผลที่สรุปที่ได้มาจะเห็นว่าค่า std มีค่ามากกว่าค่า mean และ max มีมากสุด 10 ล้าน เดาได้เลยว่าเป็น outliner แน่นอน เราเลยใช้ function ในการกำจัด Outlier ออกไป และสามารถใช้ boxplot เพื่อดู Outlier
+จากผลที่สรุปที่ได้มาจะเห็นว่าค่า std มีค่ามากกว่าค่า mean และ max มีมากสุด 10 ล้าน เดาได้เลยว่าเป็นอาจข้อมูลที่กรอกผิด เราเลยใช้ function ในการกำจัด Outlier ออกไป และสามารถใช้ boxplot เพื่อดู Outlier
 ```
 #remove outliner
 def filter_outliner(df, column_name):
@@ -74,15 +74,21 @@ def filter_outliner(df, column_name):
     df_filtered = df[(df[column_name] < q_hi) & (df[column_name] > q_low)]
     return df_filtered
 ```
-ใช้ boxplot เพื่อดู การกระจายตัวของข้อมูล (distribution)
+ใช้ boxplot เพื่อดู การกระจายตัวของข้อมูล (distribution) และสรุปค่าสถิติ ก่อนใช้และหลังใช้ funtion
 
 ก่อนใช้ function
+
+![image](https://user-images.githubusercontent.com/110782963/225678993-997d8d2e-67ee-42a8-bd99-920a7204cfa0.png)
 
 ![image](https://user-images.githubusercontent.com/110782963/225341082-7c41195f-14f1-43b0-a63c-11bbd4e87b94.png)
 
 หลังใช้ function
 
+![image](https://user-images.githubusercontent.com/110782963/225679155-d8aa346b-de76-4cbe-bce6-329973baab70.png)
+
 ![image](https://user-images.githubusercontent.com/110782963/225341416-29fdd34a-28c6-403d-ad4a-3323ab25921c.png)
+
+โดยที่เราจะเหลือข้อมูลอยู่ Row = 879666 , column = 48 จากทั้งหมด Row = 968531 , Column = 53
 
 # 3. Exploratory data analysis (EDA)
 
