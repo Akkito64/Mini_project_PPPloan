@@ -159,7 +159,7 @@ sns.countplot(data = df, y = 'BusinessType', order = df['BusinessType'].value_co
 ![image](https://user-images.githubusercontent.com/110782963/225372209-02037779-5e1b-4a06-b7d1-c9c22fc1c80c.png)
 
 
-สรุปได้ว่า ส่วนเป็นธุรกิจแล้ว Corporation , LLC , Subchapter S Corporation
+สรุปได้ว่า ส่วนใหญ่แล้วเป็นธุรกิจประเภท Corporation , LLC , Subchapter S Corporation
 
 
 
