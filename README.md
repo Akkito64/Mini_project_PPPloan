@@ -130,7 +130,7 @@ plt.ylabel('Count LMI')
 
 ![image](https://user-images.githubusercontent.com/110782963/225368118-ef56caca-481b-4194-a22a-b657a395565a.png)
 
-ดูจากกราฟจำนวนที่เป็น N มากกว่าที่ เป็น Y จึงสรุปได้ว่า ธูรกิจที่มีรายได้ต้่ากว่าปานกลางมีค่ามากกว่าธุรกิจที่มีรายได้สูง
+Note : ดูจากกราฟจำนวนที่เป็น N มากกว่าที่ เป็น Y จึงสรุปได้ว่า ธูรกิจที่มีรายได้ต้่ากว่าปานกลางมีค่ามากกว่าธุรกิจที่มีรายได้สูง โดยที่ LMI indicator ที่เป็น N มีมากถึง 73.77%
 
 ### จำนวนของธุรกิจที่อยู่ในพื้นที่ Hubzone และ No-Hubzone
 
@@ -147,7 +147,7 @@ plt.title('HubzoneIndicator')
 ```
 ![image](https://user-images.githubusercontent.com/110782963/225369464-b612f0ec-1791-476a-8aae-e5749382c6a6.png)
 
-ดูจากกราฟจำนวนที่เป็น N มากกว่าที่ เป็น Y จึงสรุปได้ว่า ธูรกิจที่อยู่ไม่อยู่ในพื้นที่ Hubzone มากกว่า ธุรกิจที่อยู่ในพื้นที่ Hubzone
+Note : สรุปได้ว่าจากกราฟ  N > Y แสดงว่า เขตที่อยู่นอก Hubzone มากกว่าเขตที่อยู่ในพิ้นที่ Hubzone โดยที่เขตที่ไม่ใช่ Hubzone มีมากถึง 73.14%
 
 ### จำนวนอายุของธุรกิจ และ LMI
 ```
@@ -185,14 +185,21 @@ sns.countplot(data = df, y = 'BusinessType', order = df['BusinessType'].value_co
 
 ## Q1 ค่าเฉลี่ยของเงินที่ยืมไปในแต่ละพื้นที่ว่าในแต่ละรัฐ รัฐไหนยืมมากที่สุดเรียงตามลำดับ
 ```
-q_median = df.groupby("BorrowerState")['InitialApprovalAmount','CurrentApprovalAmount'].apply(lambda x : x.median()).sort_values(by = ["InitialApprovalAmount",'CurrentApprovalAmount'],ascending=True).plot(kind = 'barh' , figsize = (15,15)    )
-plt.title('Mean Borrowerstate by Initail and Current')
-plt.xlabel('State')
-plt.ylabel('Amount')
-plt.show()
+df_statistic  = df.groupby("BorrowerState")['CurrentApprovalAmount'].agg(['mean','median','sum','count']).sort_values(by= ['mean','sum','median','count'],ascending=False)
+
+display(df_statistic.head())
+
+print('\n-------------------------------------------------------\n')
+
+display(df_statistic.tail())
 
 ```
-![image](https://user-images.githubusercontent.com/110782963/225366400-f64c9d0c-0639-4628-8e64-f6ce1537fbe9.png)
+
+![image](https://user-images.githubusercontent.com/110782963/225691855-c8210da2-9eed-4a1a-836d-a352763deb7f.png)
+
+Note : สรุปได้ว่า DC (Washington, D.C.) มีค่าเฉลี่ยมากที่สุด และ AS(American samoa) ที่มีค่าเฉลี่ยน้อยที่สุด
+
+
 
 ## Q2 ค่าเฉลี่ยของพนักงานในแต่ละรัฐ
 ```
