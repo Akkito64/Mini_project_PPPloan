@@ -92,12 +92,16 @@ plt.title("Top 10 State for PPP and PPS")
 
 ![image](https://user-images.githubusercontent.com/110782963/225342487-8af0584e-9d61-4b7d-acdd-f75b3f0998d8.png)
 
+Note : สรุปได้ว่าที่เมือง CA = California มีจำนวนบริษัท ที่ใช้ บริการ PPP and PPS มากที่สุด
+
 ### Top 5 ธนาคารที่ให้กู้ยืมมากที่สุด
 ```
 sns.countplot(data = df, y = 'OriginatingLender', order = df['OriginatingLender'].value_counts().index[:5], color = 'Green')
 ```
 
 ![image](https://user-images.githubusercontent.com/110782963/225366799-07672b75-030c-48ec-80fe-b13f38ef3151.png)
+
+Note : ธนาคาร JPMorgan chase Bank มีการปล่อยให้กู้ยืมมากที่สุด
 
 ### จำนวนของ LMI ที่ เป็น Y และ N
 ```
