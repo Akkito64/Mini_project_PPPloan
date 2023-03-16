@@ -7,26 +7,27 @@
 2. Worapat Phinyawan 6510412014 DADS
 ## Data information 
 File name : 1. public_150k_plus_230101.csv
+
 Row = 968531 , Column = 53
 
 Column ที่จำเป็นต้องรู้
 
 1. LMI indicator คือ ซึ่งเป็นตัวบอกว่าผู้ขอกู้เงินมีรายได้ต่ำถึงปานกลางหรือไม่ โดย LMI Indicator เป็น N หมายถึงว่าผู้ขอกู้เงินไม่มีรายได้ต่ำถึงปานกลาง หรือไม่ได้รับการแสดงผลว่ามีรายได้ต่ำถึงปานกลางจากหน่วยงานที่เกี่ยวข้อง ซึ่งอาจเป็นบุคคลหรือกิจการที่มีรายได้สูงกว่ามาตรฐาน LMI ที่กำหนดไว้ตามกฎหมาย หรือไม่ตรงกับเกณฑ์ที่กำหนดในแต่ละประเทศหรือพื้นที่ดังกล่าว
-
 2. Hubzone = เขตที่ไม่ค่อยได้ใช้ในอดีตที่มีความยากในการประกอบธุรกิจ
-
 3. JobsReported = จำนวนพนักงานในบริษัท
 4. BusinessAgeDescription = อายุของบริษัท (Existing ,Newbusiness , Start-up)
+5. ProcessingMethod = แบ่งออกเป็น PPP(การกู้ยืมครั้งแรก) และ PPS(การกู้ยืมครั้งที่ 2) 
 
 # Paycheck Protection Program Loan Data(PPP) คืออะไร ?                                                                                        
-เป็นโปรแกรมเงินกู้ที่จัดตั้งขึ้นโดย US Small Business Administration (SBA) เพื่อตอบสนองต่อการระบาดใหญ่ของ Covid-19 w
-โดยจุดมุ่งหมายของ PPP คือการให้ความช่วยเหลือทางการเงินแก่ธุรกิจขนาดเล็กในรูปแบบของเงินที่ forgivable loans 
-Forgivable loans คือ เงินที่ไม่ต้องคืนกลับในเงื่อนที่ PPP กำหนดไว้ เช่น ค่าจ้างเงินเดือน ค่าเช่าที่ ค่าสาธารณูปโภค และดอกเบี้ยจำนอง ในช่วงระยะเวลาที่กำหนด และมีข้อกำหนดตามที่ SBA ที่ได้กำหนดแนวทางในแต่ขั้นไว้
+Paycheck Protection Program (PPP) คือโครงการของรัฐบาลสหรัฐอเมริกา (US Government) ที่เป็นส่วนหนึ่งของแผนช่วยเหลือเศรษฐกิจจากผลกระทบของโควิด-19 โดยโครงการนี้มีวัตถุประสงค์เพื่อช่วยเหลือธุรกิจขนาดเล็ก โดยให้สินเชื่อพิเศษในการจัดหาทุนทำธุรกิจเพื่อช่วยเหลือในการจ่ายเงินเดือนของพนักงานและค่าใช้จ่ายอื่นๆ เช่น ค่าเช่าอาคารสำนักงาน ค่าน้ำ ค่าไฟฟ้า และค่าใช้จ่ายอื่นๆ โดยสินเชื่อนี้สามารถขอได้จากธนาคารหรือสถาบันการเงินอื่นๆ ที่เป็นส่วนหนึ่งของโครงการนี้ โดยส่วนใหญ่จะมีอัตราดอกเบี้ยที่ต่ำกว่าปกติและส่วนบางส่วนอาจถูกยกเว้นไม่ต้องชำระเงินคืน โดยหลังจากที่ได้รับการอนุมัติสินเชื่อแล้ว ธุรกิจต้องใช้เงินในวัตถุประสงค์ที่กำหนดไว้ในโครงการภายในเวลา 8-24 สัปดาห์ โดยต้องส่งเอกสารแสดงการใช้เงินกลับมายืนยันต่อธนาคารเพื่อไม่ให้เกิดค่าใช้จ่ายเพิ่มเติมในภายหลัง
 
 # OBJECTIVE: Use information from the dataset to answer the following question
 1. ค่าเฉลี่ยของเงินที่ยืมไปในแต่ละพื้นที่ว่าในแต่ละรัฐ รัฐไหนยืมมากที่สุดเรียงตามลำดับ
 2. ค่าเฉลี่ยของพนักงานในแต่ละรัฐ
-3. หาว่าในปี 2020 และ 2021 การกู้ยืมมีแนวโน้วเป็นยังไง โดยดูจากจำนวนของคนกู้ในแต่ละปี
+3. ธุรกิจที่อยู่ในพื้นที่ Hubzone ได้เงินกู้โดยเฉลี่ยมากกว่าธุรกิจไม่ได้อยู่ในพื้นที่ Hubzone หรือไม่
+4. ลักษณะของธุรกิจที่มีการกู้ยืมมากที่สุดมีลักษณะเป็นอย่างไร
+5. หาว่าในปี 2020 และ 2021 การกู้ยืมมีแนวโน้วเป็นยังไง โดยดูจากจำนวนของคนกู้ในแต่ละปี
+6. ธนาคารไหนปล่อยเงินกู้โดยเฉลี่ยให้กับธุรกิจมากที่สุด
 
 # DATA COLLECTION
 ## 1. Import Data
@@ -206,7 +207,87 @@ plt.legend(["Median", "Mean"]);
 
 จากกราฟ สรุปได้ว่าในรัฐ AS( American Samoa) มีจำนวนพนักงานเฉลี่ยมากที่สุด ถึงแม้ว่าจะมีประชากรน้อยก็ตาม
 
-## Q3 หาว่าในปี 2020 และ 2021 การกู้ยืมมีแนวโน้วเป็นยังไง โดยดูจากจำนวนของคนกู้ในแต่ละปี
+## Q3 ธุรกิจที่อยู่ในพื้นที่ Hubzone ได้เงินกู้โดยเฉลี่ยมากกว่าธุรกิจไม่ได้อยู่ในพื้นที่ Hubzone หรือไม่
+
+```
+# หาค่าเฉลี่ย Approval_Amount ของ Hubzone เป็น Y และ N
+avg_y = df[df['HubzoneIndicator'] == 'Y']['CurrentApprovalAmount'].mean()
+avg_n = df[df['HubzoneIndicator'] == 'N']['CurrentApprovalAmount'].mean()
+
+# แสดงผลค่าเฉลี่ย Approval_Amount ของ Hubzone เป็น Y และ N ที่มีทศนิยม 2 ตำแหน่ง
+print("ค่าเฉลี่ย Approval_Amount ของ Hubzone เป็น Y: ", round(avg_y, 2))
+print("ค่าเฉลี่ย Approval_Amount ของ Hubzone เป็น N: ", round(avg_n, 2))
+
+```
+
+![image](https://user-images.githubusercontent.com/110782963/225650558-7d540f80-2db8-4f14-885b-673037260132.png)
+
+Note : พบว่าธุรกิจที่อยู่ในพื้นที่ Hubzone ได้เงินกู้โดยเฉลี่ยมากกว่าธุรกิจไม่ได้อยู่ในพื้นที่ Hubzone แต่ไม่มากนัก
+```
+filtered_df = df[(df['HubzoneIndicator'] == 'Y') ]
+mean_approval_amount_hubzone = filtered_df['CurrentApprovalAmount'].mean()
+count_y_h = filtered_df.shape[0]
+
+print(f"ค่าเฉลี่ย Approval Amount ของคนที่ทำธุรกิจในพื้นที่ Hubzone {mean_approval_amount_hubzone:.2f} $")
+print(f"จำนวนธุรกิจที่อยู่ในพื้นที่ Hubzone คือ {count_y_h}")
+
+```
+
+![image](https://user-images.githubusercontent.com/110782963/225651032-7d64bf6d-2e2a-4f28-ae07-f814cee2e134.png)
+
+```
+filtered_df = df[ (df['LMIIndicator'] == 'Y')]
+
+mean_approval_amount_lmi = filtered_df['CurrentApprovalAmount'].mean()
+
+count_y_l = filtered_df.shape[0]
+
+print(f"ค่าเฉลี่ย Approval Amount ของคนที่ทำธุรกิจในพื้นที่ LMI คือ {mean_approval_amount_lmi:.2f} $")
+print(f"จำนวนธุรกิจที่อยู่ในพื้นที่ LMI คือ {count_y_l}")
+
+```
+
+![image](https://user-images.githubusercontent.com/110782963/225651289-8fb3cfe8-a771-4611-992d-57fc80283009.png)
+
+```
+filtered_df = df[(df['HubzoneIndicator'] == 'Y') & (df['LMIIndicator'] == 'Y')]
+
+mean_approval_amount = filtered_df['CurrentApprovalAmount'].mean()
+
+count_y = filtered_df.shape[0]
+
+print(f"ค่าเฉลี่ย Approval Amount ของคนที่ตอบ Y จาก Hubzone และ LMI คือ {mean_approval_amount:.2f} $")
+print(f"จำนวนธุรกิจที่อยู่ในพื้นที่ Hubzone และ LMI คือ {count_y}")
+
+```
+
+![image](https://user-images.githubusercontent.com/110782963/225651818-31c18f8d-2227-431a-aace-eddd9b70eaca.png)
+
+Note : จะเห็นว่า Approval Amount ของธุรกิจที่อยู่ในพื้นที่ Hubzone และธุรกิจที่อยู่ในกลุ่ม  LMI นั้นไม่ต่างกันมากนักแต่ด้วยธุรกิจที่อยู่ในกลุ่ม LMI และอยู่ในพื้นที่ Hubzone มีจำนวนไม่น้อยแต่ได้จำนวนเงินไม่ต่างกับสองกลุ่มก่อนหน้า
+
+## Q4 ลักษณะของธุรกิจที่มีการกู้ยืมมากที่สุดมีลักษณะเป็นอย่างไร
+
+```
+
+df.groupby(['BusinessAgeDescription','LMIIndicator','HubzoneIndicator',"BusinessType"]).size().reset_index(name='count').sort_values('count', ascending=False).head()
+
+```
+
+![image](https://user-images.githubusercontent.com/110782963/225654152-b3ba00b1-d999-4eff-a9e5-49713abfeba6.png)
+
+Note : พบว่าธุรกิจส่วนใหญ่ที่มากู้ยืมมีอายุมากกว่า 2 ปี โดยที่ 3 อันดับแรกจะเป็นบริษัทประเภท Corporation, Limited Liability Company(LLC) และ Subchapter S Corporation โดยจะมี LMI เป็น N และ Hubzone เป็น N หรือก็คือทั้ง 3 กลุ่มเป็นธุรกิจที่มีรายได้สูงกว่ามาตรฐาน LMI ไม่อยู่ในย่าน Hubzone ไม่ยากในการทำธุรกิจและไม่ใช่ย่านที่มีอัตราการว่างงานสูง
+
+Action plan : อาจจะเป็นการจัดโปรโมชั่นลดอัตราดอกเบี้ยเงินกู้ให้กับธุรกิจที่มีอายุมากกว่า 2 ปี หรือจะเน้นไปที่กลุ่มธุรกิจ 3 ประเภทนั้นเพื่อเพิ่มโอกาสในการกู้ยืมเงินในอนาคต
+
+
+
+
+
+
+
+
+
+## Q5 หาว่าในปี 2020 และ 2021 การกู้ยืมมีแนวโน้วเป็นยังไง โดยดูจากจำนวนของคนกู้ในแต่ละปี
 
 ตอนแรกเราดูจากข้อมูล ที่ column Dateapprove ยังไม่เป็น type ตามที่เราต้องการ เราจึงใช้ 
 
@@ -260,6 +341,41 @@ Note :
 Action plan ที่เราจะต่อการที่ได้ข้อมูลนี้มา
 1. ศึกษาและวิเคราะห์เพิ่มเติมเกี่ยวกับสาเหตุและผลกระทบของการแบ่งประเภทตาม LMI Indicator และพัฒนานโยบายเพื่อเปิดโอกาสให้กับธุรกิจที่มี LMI Indicator ที่มีฐานะทางการเงินที่รายได้ต่ำกว่าปานกลาง ที่วัด LMI Indicator เป็น N ให้มีเปลี่ยนแปลงให้มากขึ้นจนวัด LMI indicator เป็น Y
 2. พัฒนาแผนกลยุทธ์ในการสนับสนุนธุรกิจให้มีความหลากหลายและเหมาะสมกับธุรกิจที่มีความต้องการแตกต่างกัน
+
+## Q6 ธนาคารไหนปล่อยเงินกู้โดยเฉลี่ยให้กับธุรกิจมากที่สุด
+
+```
+result = df.groupby('ServicingLenderName')['CurrentApprovalAmount'].agg(['median','mean', 'count']).round(2)
+
+df_mean = result.sort_values(['median'] , ascending=False)
+
+display(df_mean)
+
+```
+![image](https://user-images.githubusercontent.com/110782963/225656578-2ba62c6a-e7bb-4414-bc85-81ead3af5f6c.png)
+
+Note : จะเห็นว่าว่าธนาคารที่ปล่อยกู้เฉลี่ยมากที่สุดคือ Peapack-Gladstone Bank, Southeast Community Capital Corporation dba Pathway Lending, Western Cooperative CU ตามลำดับ 
+
+Action plan : จากข้อมูลนี้เราอาจจะใช้เป็นทางเลือกให้กับธุรกิจที่ต้องการเงินกู้ที่มีจำนวนมากแต่อาจต้องศึกษาเกี่ยวกับกฏเกณฑ์และอัตราดอกเบี้ยของธนาคารนั้นๆเพิ่มเติม
+
+```
+df_count = result.sort_values(['count'] , ascending=False)
+
+display(df_count)
+
+```
+![image](https://user-images.githubusercontent.com/110782963/225657261-5f709f84-3680-42b6-8ef2-ce3ff675ae22.png)
+
+
+Note : ธนาคารที่ปล่อยกู้ให้ธุรกิจมากที่สุดคือ JPMorgan Chase Bank, National Association, Bank of America, , PNC Bank, Truist Bank ตามลำดับโดยที่ JPMorgan Chase Bank อนุมัติเงินกู้ให้กับธุรกิจถึง 45191 
+
+Action plan :รายจากข้อมูลนี้เพื่อใช้แนะนำให้กับธุรกิจที่อาจจะไม่ชอบความยุ่งยากในการขออนุมัติหรือธุรกิจที่ไม่ได้ต้องการวงเงินกู้สูงมากนัก
+
+# Challenge
+1. 
+
+
+
 
 
 
