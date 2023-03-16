@@ -65,7 +65,7 @@ df = df.dropna()
 pd.options.display.float_format = "{:,.2f}".format
 df.describe()[['InitialApprovalAmount','CurrentApprovalAmount']]
 ```
-จากผลที่สรุปที่ได้มาจะเห็นว่าค่า std มีค่ามากกว่าค่า mean และ max มีมากสุด 10 ล้าน เดาได้เลยว่าเป็นอาจข้อมูลที่กรอกผิด เราเลยใช้ function ในการกำจัด Outlier ออกไป และสามารถใช้ boxplot เพื่อดู Outlier
+จากผลที่สรุปที่ได้มาจะเห็นว่าค่า std มีค่ามากกว่าค่า mean และ max มีมากสุด 10 ล้าน เดาได้เลยว่าเป็นอาจข้อมูลที่กรอกผิด เราเลยใช้ function ในการ Fitler Outlier  
 ```
 #remove outliner
 def filter_outliner(df, column_name):
