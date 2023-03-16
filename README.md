@@ -1,11 +1,15 @@
-# Mini_project
-เอาข้อมูลมาจาก https://www.kaggle.com/datasets/nflovejoy/paycheck-protection-program-loan-data?select=public_150k_plus_230101.csv&sort=votes
+# Mini Project
+
+Paycheck Protection Program Loan Data(PPP)
 
 # Author
 
 1. Ratchaphon kuntipsombut 6510412013 DADS
 2. Worapat Phinyawan 6510412014 DADS
 ## Data information 
+
+เอาข้อมูลมาจาก https://www.kaggle.com/datasets/nflovejoy/paycheck-protection-program-loan-data?select=public_150k_plus_230101.csv&sort=votes
+
 File name : 1. public_150k_plus_230101.csv
 
 Row = 968531 , Column = 53
@@ -373,7 +377,7 @@ display(df_count)
 
 Note : ธนาคารที่ปล่อยกู้ให้ธุรกิจมากที่สุดคือ JPMorgan Chase Bank, National Association, Bank of America, , PNC Bank, Truist Bank ตามลำดับโดยที่ JPMorgan Chase Bank อนุมัติเงินกู้ให้กับธุรกิจถึง 45191 
 
-Action plan :รายจากข้อมูลนี้เพื่อใช้แนะนำให้กับธุรกิจที่อาจจะไม่ชอบความยุ่งยากในการขออนุมัติหรือธุรกิจที่ไม่ได้ต้องการวงเงินกู้สูงมากนัก
+Action plan : รายจากข้อมูลนี้เพื่อใช้แนะนำให้กับธุรกิจที่อาจจะไม่ชอบความยุ่งยากในการขออนุมัติหรือธุรกิจที่ไม่ได้ต้องการวงเงินกู้สูงมากนัก
 
 # Challenge
 1. ใช้เวลาในการทำความเข้าใจข้อมูล และเป็นเรื่องใหม่สำหรับพวกเรา ทำให้ใช้เวลานานในการทำเข้าใจ 
