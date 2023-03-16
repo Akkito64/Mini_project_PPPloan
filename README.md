@@ -102,7 +102,7 @@ plt.title("Top 10 State for PPP and PPS")
 
 ![image](https://user-images.githubusercontent.com/110782963/225342487-8af0584e-9d61-4b7d-acdd-f75b3f0998d8.png)
 
-Note : สรุปได้ว่าที่เมือง CA = California มีจำนวนบริษัท ที่ใช้ บริการ PPP and PPS มากที่สุด
+Note : สรุปได้ว่าที่เมือง CA = California มีจำนวนบริษัทที่กู้ยืมมากที่สุด รองลงมาเป็น Tx(Texas) และ NY(New York) ตามลำดับ
 
 ### Top 5 ธนาคารที่ให้กู้ยืมมากที่สุด
 ```
