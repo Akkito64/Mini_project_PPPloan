@@ -158,7 +158,7 @@ f_fittered = df.groupby(['BusinessAgeDescription', 'LMIIndicator'])['BusinessAge
 
 ![image](https://user-images.githubusercontent.com/110782963/225371468-d4715fb2-c048-41bf-b8b3-9c65752ffeda.png)
 
-สรุปได้ว่า ส่วนใหญ่จำนวนของธุรกิจที่มีอยู่แล้วหรือมากกว่า 2 ปี และ มี IMI indicator มีผลเป็น N ที่บอกว่าไม่ใช่เป็นบริษัทรายได้ต่ำกว่าปานกลาง 
+สรุปได้ว่า ส่วนใหญ่จำนวนของธุรกิจที่มีอยู่แล้วหรือมากกว่า 2 ปี และ มี IMI indicator มีผลเป็น N ที่บอกว่าไม่เป็นบริษัทที่มีรายได้ต่ำกว่าปานกลาง 
 
 ### จำนวน BusinessType 
 
